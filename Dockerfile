@@ -26,6 +26,9 @@ ENV TARGETARCH=linux-x64
 
 WORKDIR /azp
 
+RUN chmod -R +x /azp
+RUN chmod -R g+rwX /azp
+
 COPY ./start.sh .
 RUN chmod +x start.sh
 
